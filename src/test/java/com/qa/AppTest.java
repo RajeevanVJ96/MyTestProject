@@ -1,6 +1,7 @@
 package com.qa;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -20,4 +21,12 @@ public class AppTest
         app = new App();
         assertEquals(2,app.testMethod(2,1));
     }
+
+    @Test
+    public void testFalseMethod(){
+        app = new App();
+        assertFalse("FUckface", app.testFalse(4,2));
+    }
+
+    
 }
